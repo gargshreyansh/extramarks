@@ -14,14 +14,12 @@ class  App extends Component {
     }
   }
    componentWillMount(){
-// alert("will mount")
    }
    componentDidMount(){
      this.setState({loader:true})
     axios.get('http://dummy.restapiexample.com/api/v1/employees')
     .then((response)=> {
       this.setState({data1:response.data, loader:false})
-      //  console.log(response.data)
     })
    }
   render(){
